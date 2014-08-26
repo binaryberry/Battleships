@@ -49,3 +49,45 @@ Once the ships have been placed, the players take turns in selecting cells on th
 ##### Interactions
 - The Ship
 - The Board
+
+# Game dynamcs
+
+## Game creation
+
+##### Initialization
+
+- The player tells the game to create itself
+- The game tells the grid to create itself
+- The grid builds a 10x10 array with coordinates A-J and 1-10
+- The grid tells 100 cells to create themselves
+- The grid assigns each cell its coordinates
+- The grid tells 5 ships to create themselves (with varying lengths)
+- The grid tells the game it is ready
+- The game repeats the process for Player 2's grid
+
+##### Ship placement
+
+- The game prompts Player 1 to place ships
+- The player returns a ship and location
+- The grid checks with each cell where the ship will be placed if it is free
+- The grid tells each cell where the ship will be placed that it is filled and with which ship
+- The grid tells the ship that it has been placed
+- The grid iterates over all cells to determine whether their status needs changing (i.e. if they are next to a filled cell)
+- The grid tells the game that the ship has been placed
+- The game iterates until all ships have been placed
+- The game initiates the process for Player 2
+
+# Game play
+
+- The game invites Player 1 to make a move
+- Player 1 tells the game which cell it wants to attack
+- The game tells the cell it has been hit
+- The cell tells the ship it has been hit
+- The grid asks the cell if it had a ship
+- The grid asks the ship if it has been sunk
+- The game asks the grid if there has been a hit, miss, or sinking
+- The game updates the score
+- The game checks whether the player has been defeated
+- The game decides who's turn it is based on the outcome of the previous move
+
+
