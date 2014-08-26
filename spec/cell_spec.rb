@@ -19,20 +19,23 @@ describe Cell do
 	end
 
 	it 'should be able to take a hit' do
-		expect(cell).to respond_to(:hit!)
+		expect(cell).to respond_to(:hit_it)
 	end
 
 	it "should return 'miss' if the content is water" do
-		cell.hit!
+		cell.hit_it
 		expect(cell.status).to eq 'miss'
 	end
 
 	it "should return 'hit' if the content is a ship" do
 		expect(ship).to receive(:hit!)
 		cell.content = ship
-		
-		cell.hit!
+		cell.hit_it
 		expect(cell.status).to eq 'hit'
+	end
+
+	it 'should know its grid number' do
+		
 	end
 
 end

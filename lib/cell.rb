@@ -12,10 +12,15 @@ class Cell
 	end
 
 
-	def hit!
+	def hit_it
 	# 	#content.hit!
 	# 	@status = 'hit'
-		@status = 'miss'
+		if @content == 'water'
+			@status = 'miss' 
+		else
+			@status = 'hit'
+			content.hit!
+		end
 	end
 
 
