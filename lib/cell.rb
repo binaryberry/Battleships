@@ -10,11 +10,14 @@ class Cell
 	end
 
 	def receive ship
+		count    = ship.length
+		raise 'No more cells for this ship' if count
 		@content = ship
+
 	end
 
 
-	def hit_it
+	def hit_it!
 		if @content == 'water'
 			@status = 'miss' 
 		else
