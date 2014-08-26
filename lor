@@ -1,9 +1,4 @@
-[32m.[0m[32m.[0m[33m*[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
 
-Pending:
-  [33mBoard asks the player to place the ships[0m
-    # [36mTemporarily skipped with xit[0m
-    # [36m./spec/board_spec.rb:18[0m
-
-Finished in 0.0092 seconds (files took 0.09879 seconds to load)
-[33m17 examples, 0 failures, 1 pending[0m
+Finished in 5.41 seconds (files took 0.09198 seconds to load)
+[32m17 examples, 0 failures[0m
