@@ -4,7 +4,7 @@ describe Cell do
 
 	let(:cell)  { Cell.new('A1') }
 	let(:ship)  { double :ship   }
-	let(:board) { double :board }
+	let(:board) { double :board  }
 
 
 	context 'Is initialized' do
@@ -26,22 +26,25 @@ describe Cell do
 		
 		it "should change its content to ship when receives a ship" do
 			expect(ship).to receive(:length)
-			cell.receive(ship)
+			cell.accept(ship)
 			expect(cell.content).to eq ship
 		end
 
 		it "should know the length of a ship" do
 			expect(ship).to receive(:length)
-			cell.receive(ship)
-		end 
+			cell.accept(ship)
+		end
+
+		it "changes @placed attribute after reach length" do
+			allow(ship).to receive(:length)
+			expect(ship).to receive(:place!)
+			cell.accept ship
+			ship.place!
+		end
 
 		it "should raise an error if cell reach ship length" do
 			expect(ship).to receive(:length).and_return(3)
-			expect{ 4.times{cell.receive(ship)} }.to raise_error(RuntimeError)
-		end
-
-		xit "should receive the coordinates to place the ship" do
-			expect(board).to receive(:placement)
+			expect{ cell.accept(ship) }.to raise_error(RuntimeError)
 		end
 
 	end

@@ -9,11 +9,11 @@ class Cell
 		@coordinates = coordinates
 	end
 
-	def receive ship
+	def accept ship
 		count    = ship.length
 		raise 'No more cells for this ship' if count
 		@content = ship
-
+		ship.place! if count
 	end
 
 
