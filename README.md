@@ -15,7 +15,7 @@ Once the ships have been placed, the players take turns in selecting cells on th
 
 ## The Board
 ##### Responsibilities
-- it creates itself, 100 cells with their location, and 5 ships
+- it creates itself, 100 cells with their location, and 5 ships as follows: the aircraft carrier (size: 5 cells), the battleship (4 cells), the Submarine (3 cells), the Destroyer (3 cells) and the patrol boat (2 cells)
 - it asks the player to place the ships
 - it knows where ships can be placed
 - it knows what ships are in it and their state
