@@ -15,7 +15,7 @@ class Board
 		("A".."J").each do |letter|
 			(1..10).each do |number|
 			k="#{letter}#{number}"
-			@cells[k]=Cell.new(k)
+			@cells.object.each[k]=Cell.new(k)
 			end
 		end
 	@cells
