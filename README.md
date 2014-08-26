@@ -15,12 +15,30 @@ Once the ships have been placed, the players take turns in selecting cells on th
 
 ## The Board
 ##### Responsibilities
-- it knows blablabla
+- it creates itself, 100 cells with their location, and 5 ships
+- it asks the player to place the ships
+- it knows where ships can be placed
+- it knows what ships are in it and their state
+- it asks the player for hit locations
 
 ##### Interactions
-
-
+- The Ship
+- The Cell
 
 ## The Ship
 
+##### Responsibilities
+- it creates itself, 100 cells with their location, and 5 ships
+
+##### Interactions
+- The Board
+- The Cell
+
 ## The Cell
+
+##### Responsibilities
+- it creates itself, 100 cells with their location, and 5 ships
+
+##### Interactions
+- The Ship
+- The Board
