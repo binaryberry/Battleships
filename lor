@@ -1,25 +1,4 @@
-[31mF[0m
+[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
 
-Failures:
-
-  1) Board is created with 100 cells
-     [31mFailure/Error: let(:board) { Board.new	}[0m
-     [31mNameError:[0m
-     [31m  uninitialized constant Board::Cell[0m
-     [36m# ./lib/board.rb:17:in `block (2 levels) in cells'[0m
-     [36m# ./lib/board.rb:15:in `each'[0m
-     [36m# ./lib/board.rb:15:in `block in cells'[0m
-     [36m# ./lib/board.rb:14:in `upto'[0m
-     [36m# ./lib/board.rb:14:in `each'[0m
-     [36m# ./lib/board.rb:14:in `cells'[0m
-     [36m# ./lib/board.rb:7:in `initialize'[0m
-     [36m# ./spec/board_spec.rb:5:in `new'[0m
-     [36m# ./spec/board_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
-     [36m# ./spec/board_spec.rb:13:in `block (2 levels) in <top (required)>'[0m
-
-Finished in 0.00061 seconds (files took 0.08593 seconds to load)
-[31m1 example, 1 failure[0m
-
-Failed examples:
-
-[31mrspec ./spec/board_spec.rb:12[0m [36m# Board is created with 100 cells[0m
+Finished in 5.41 seconds (files took 0.09198 seconds to load)
+[32m17 examples, 0 failures[0m
