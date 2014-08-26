@@ -6,10 +6,13 @@ class Cell
 		@status = nil
 	end
 
-	def hit!
-		@status = 'hit'
-		content.hit
-	end
+
+
+	# def hit!
+	# 	#content.hit!
+	# 	@status = 'hit'
+		
+	# end
 
 
 
