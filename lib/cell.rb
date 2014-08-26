@@ -7,6 +7,9 @@ class Cell
 		@content ||= 'water'
 	end
 
+	def receive ship
+		@content = ship
+	end
 
 
 	# def hit!

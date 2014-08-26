@@ -13,20 +13,14 @@ describe Cell do
 		expect(cell.content).to eq 'water'
 	end
 
-	it "should change its content to ship when a ship is placed" do
+	it "should change its content to ship when receives a ship" do
 		cell.receive(ship)
 		expect(cell.content).to eq ship
 	end
 
-	# it "knows when is occupied" do
-	# 	cell.content = ship
-	# 	expect(cell.content).to eq ship
-	# end
-
-	# it 'should be able to take a hit' do
-	# 	cell.hit!
-	# 	expect(cell.status).to eq 'hit'
-	# end
+	it 'should be able to take a hit' do
+		expect(cell).to respond_to(:hit!)
+	end
 
 	# it "should pass that information to the content" do
 	# 	expect(ship).to receive(:hit!)
