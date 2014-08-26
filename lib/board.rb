@@ -41,5 +41,12 @@ class Board
 		@placement
 	end
 
+	def ask_hit
+		puts "which cell do you want to hit, officer? ie:A12"
+		target = gets.chomp.capitalize
+	end
+
+
+
 end
 
