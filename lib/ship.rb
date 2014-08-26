@@ -9,10 +9,6 @@ class Ship
 	@placed		= false
 	end
 
-	def hit_count
-		@hit_count
-	end
-
 	def hit!
 		@hit_count += 1
 	end
