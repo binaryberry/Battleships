@@ -28,7 +28,11 @@ Once the ships have been placed, the players take turns in selecting cells on th
 ## The Ship
 
 ##### Responsibilities
-- it creates itself, 100 cells with their location, and 5 ships
+- it knows its length
+- it knows which grid it belongs to
+- it knows if it has been placed
+- it knows when it has been hit
+- it knows when it has been sunk
 
 ##### Interactions
 - The Board
@@ -37,7 +41,10 @@ Once the ships have been placed, the players take turns in selecting cells on th
 ## The Cell
 
 ##### Responsibilities
-- it creates itself, 100 cells with their location, and 5 ships
+- knows its coordinates
+- knows if it is available for a ship to be placed on it
+- knows if it is occupied by a ship
+- knows if it has been hit
 
 ##### Interactions
 - The Ship
