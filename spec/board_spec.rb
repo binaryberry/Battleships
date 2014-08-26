@@ -20,4 +20,9 @@ it 'asks the player to place the ships' do
 	expect(board.ask_placement(destroyer)).to match([/[A-Z]\d\d/,/[A-Z]\d\d/]) 
 end
 
+it 'asks the player for the hit location' do
+	expect(board.ask_hit).to match(/[A-Z]\d\d/)
+
+end
+
 end
