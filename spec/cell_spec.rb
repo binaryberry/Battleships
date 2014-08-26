@@ -22,6 +22,12 @@ describe Cell do
 		expect(cell).to respond_to(:hit!)
 	end
 
+	it "should return 'miss' if the content is water" do
+		cell.content = 'water'
+		cell.hit!
+		expect(cell.status).to eq 'miss'
+	end
+
 	# it "should pass that information to the content" do
 	# 	expect(ship).to receive(:hit!)
 	# 	cell.content = ship

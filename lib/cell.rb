@@ -12,11 +12,11 @@ class Cell
 	end
 
 
-	# def hit!
+	def hit!
 	# 	#content.hit!
 	# 	@status = 'hit'
 		
-	# end
+	end
 
 
 
