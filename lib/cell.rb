@@ -15,8 +15,6 @@ class Cell
 
 
 	def hit_it
-	# 	#content.hit!
-	# 	@status = 'hit'
 		if @content == 'water'
 			@status = 'miss' 
 		else
