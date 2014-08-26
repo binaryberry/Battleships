@@ -1,4 +1,6 @@
-require './lib/board'
+
+require 'board'
+
 
 describe Board do
 
@@ -13,10 +15,10 @@ it 'is created with 100 cells' do
 	expect(board.cells.count).to eq 100
 end
 
-it 'is created with five new ships' do
-	
-	expect(board.ship.count).to eq 5
-end
 
+# xit 'is created with five new ships' do
+	
+# 	expect(board.ship.count).to eq 5
+# end
 
 end

@@ -1,12 +1,13 @@
-# require './lib/ship'
-require './lib/cell'
 
+# require './lib/ship'
+require 'cell'r
 
 class Board
 
 	def initialize
 	# create_ships
 	cells
+	@ships = create_ships
 	end
 
 
@@ -15,25 +16,26 @@ class Board
 		("A".."J").each do |letter|
 			(1..10).each do |number|
 			k="#{letter}#{number}"
-			@cells.object.each[k]=Cell.new(k)
+			@cells[k]=Cell.new(k)
+
 			end
 		end
 	@cells
 	end
 
-# 	def ships
-# 	@ships 
-# 	end
 
-# 	def add_ship(ship)
-# 	@ships << ship
-# 	end
-
-# def create_ships
+	
+# 	def create_ships
 # 	aircraft_carrier=Ship.new(5)
 # 	battleship=Ship.new(4)
 # 	submarine=Ship.new(3)
 # 	destroyer=Ship.new(3)
 # 	patrol_boat=Ship.new(2)
-# end
+# 	end
+
+
+
+
+
 end
+
