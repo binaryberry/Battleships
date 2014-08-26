@@ -14,10 +14,10 @@ Once the ships have been placed, the players take turns in selecting cells on th
 # The Domain Model
 
 ## The Board
-### Responsibilities
+##### Responsibilities
 - it knows blablabla
 
-### Interactions
+##### Interactions
 
 
 
