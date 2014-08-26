@@ -8,7 +8,9 @@ class Cell
 
 	def hit!
 		@status = 'hit'
+		content.hit
 	end
+
 
 
 end
