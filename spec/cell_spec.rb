@@ -4,8 +4,12 @@ describe Cell do
 
 	let(:cell) { Cell.new }
 
-	it "knows that is empty" do
-		expect(cell).to be_empty
+	it "has a status" do
+		expect(cell.status).to eq true
+	end
+
+	it "it is initialized with an empty status" do
+		expect(cell.status).to eq 'empty'
 	end
 
 end
