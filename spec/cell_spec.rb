@@ -15,8 +15,15 @@ describe Cell do
 	end
 
 	it 'should be able to take a hit' do
-		cell.hit
+		cell.hit!
 		expect(cell.status).to eq 'hit'
+	end
+
+	it "should pass that information to the content" do
+		expect(ship).to receive(:hit)
+
+		cell.hit!
+
 	end
 
 end

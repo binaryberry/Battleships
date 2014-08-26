@@ -6,5 +6,9 @@ class Cell
 		@status = nil
 	end
 
+	def hit!
+		@status = 'hit'
+	end
+
 
 end
