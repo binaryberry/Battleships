@@ -13,7 +13,7 @@ class Ship
 		@hit_count
 	end
 
-	def hit
+	def hit!
 		@hit_count += 1
 	end
 
@@ -21,7 +21,7 @@ class Ship
 		@placed
 	end
 
-	def place
+	def place!
 		@placed = true
 	end
 

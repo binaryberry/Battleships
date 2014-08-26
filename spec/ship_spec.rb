@@ -21,7 +21,7 @@ describe Ship do
 		end
 
 		it "can be placed" do
-			ship.place
+			ship.place!
 			expect(ship.placed?). to be true
 		end
 
@@ -30,7 +30,7 @@ describe Ship do
 	context "Game play" do
 
 		it "recognises each time it has been hit" do
-			ship.hit
+			ship.hit!
 			expect(ship.hit_count). to be 1
 		end
 
@@ -39,7 +39,7 @@ describe Ship do
 		end
 
 		it "is sunk once it has been hit on its entire length" do
-			5.times {ship.hit}
+			5.times {ship.hit!}
 			expect(ship.sunk?). to be true
 		end
 	end
