@@ -13,6 +13,11 @@ describe Cell do
 		expect(cell.content).to eq 'water'
 	end
 
+	it "should change its content to ship when a ship is placed" do
+		cell.receive(ship)
+		expect(cell.content).to eq ship
+	end
+
 	# it "knows when is occupied" do
 	# 	cell.content = ship
 	# 	expect(cell.content).to eq ship

@@ -4,6 +4,7 @@ class Cell
 
 	def initialize
 		@status = nil
+		@content ||= 'water'
 	end
 
 
