@@ -1,10 +1,12 @@
 class Cell
 
 	attr_accessor :status, :content
+	attr_reader :coordinates
 
-	def initialize
+	def initialize(coordinates)
 		@status = nil
 		@content ||= 'water'
+		@coordinates = coordinates
 	end
 
 	def receive ship
@@ -22,7 +24,6 @@ class Cell
 			content.hit!
 		end
 	end
-
 
 
 end

@@ -2,7 +2,7 @@ require "cell"
 
 describe Cell do
 
-	let(:cell)  { Cell.new }
+	let(:cell)  { Cell.new('A1') }
 	let(:ship)  { double :ship }
 
 	it "it is initialized with an empty status" do
@@ -34,8 +34,8 @@ describe Cell do
 		expect(cell.status).to eq 'hit'
 	end
 
-	it 'should know its grid number' do
-		
+	it 'when initialized it should know its coordinates' do
+		expect(cell.coordinates).to match /[A-J]{1}\d{1}/
 	end
 
 end
