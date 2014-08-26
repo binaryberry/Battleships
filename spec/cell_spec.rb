@@ -10,7 +10,13 @@ describe Cell do
 	end
 
 	it "knows when is occupied" do
+		cell.content = ship
 		expect(cell.content).to eq ship
+	end
+
+	it 'should be able to take a hit' do
+		cell.hit
+		expect(cell.status).to eq 'hit'
 	end
 
 end
