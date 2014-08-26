@@ -1,7 +1,9 @@
 class Cell
 
-	def status
-		true
+	attr_accessor :status
+
+	def initialize
+		@status = nil
 	end
 
 end
