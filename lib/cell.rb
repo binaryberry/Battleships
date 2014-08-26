@@ -15,7 +15,7 @@ class Cell
 	def hit!
 	# 	#content.hit!
 	# 	@status = 'hit'
-		
+		@status = 'miss'
 	end
 
 
