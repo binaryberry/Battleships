@@ -1,12 +1,15 @@
 
 # require './lib/ship'
-require 'cell'
+require './lib/cell'
 
 class Board
 
-	def initialize
+	attr_reader :name
+
+	def initialize(playername)
 	create_cells
 	create_ships
+	@name = "#{playername}"
 	end
 
 	def create_cells
