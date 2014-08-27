@@ -10,10 +10,11 @@ class Cell
 	end
 
 	def accept ship
-		count    = ship.length
-		raise 'No more cells for this ship' if count
+		#count    = ship.length
+		#raise 'No more cells for this ship' if count
 		@content = ship
-		ship.place! if count
+		#ship.place! if count
+		
 	end
 
 

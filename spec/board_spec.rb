@@ -18,7 +18,7 @@ end
 
 
 xit 'asks the player for the hit location' do
-	expect(board.ask_hit).to match(/[A-Z]\d\d/)
+	expect(board.ask_hit).to match(/[A-J]\d/)
 
 end
 
