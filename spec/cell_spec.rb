@@ -1,9 +1,11 @@
 require "cell"
+require 'ship'
 
 describe Cell do
 
 	let(:cell)  { Cell.new('A1') }
 	let(:ship)  { double :ship }
+	let(:destroyer) {Ship.new(5)}
 
 	it "it is initialized with an empty status" do
 		expect(cell.status).to eq nil
@@ -36,6 +38,27 @@ describe Cell do
 
 	it 'when initialized it should know its coordinates' do
 		expect(cell.coordinates).to match /[A-J]{1}\d{1}/
+	end
+
+	it 'should print an "o" if the cell contains water' do
+		expect{cell.print_cell}. to output("~").to_stdout
+	end
+
+	it 'should print an "#" if the cell contains a ship' do
+		cell.receive destroyer
+		cell.print_cell
+		expect{cell.print_cell}. to output("#").to_stdout	
+	end
+
+	it 'should print an "x" if the cell is hit and contains a ship' do
+		cell.receive destroyer
+		cell.hit_it
+		expect{cell.print_cell}. to output("x").to_stdout
+	end
+
+	it 'should print "*" if the cell is hit [i.e. "miss"] and does not contain a ship' do
+		cell.hit_it
+		expect{cell.print_cell}. to output("*").to_stdout
 	end
 
 end

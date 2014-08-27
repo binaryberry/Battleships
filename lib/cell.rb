@@ -23,5 +23,12 @@ class Cell
 		end
 	end
 
+	def print_cell
+		print "~" if content 			== "water" and status == nil
+		print "#" if content.class 	== Ship and status == nil
+		print "x" if content.class 	== Ship and status == "hit"
+		print "*" if content 			== "water" and status == "miss"
+	end
+
 
 end
