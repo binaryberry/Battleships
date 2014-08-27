@@ -1,12 +1,17 @@
 class Ship
 
 	attr_accessor :hit_count
-	attr_reader :length
+	attr_reader :length, :name
 
-	def initialize(length)
+	def initialize(length,name)
 	@length		= length
+	@name     = name
 	@hit_count	= 0
 	@placed		= false
+	end
+
+	def self.aircraft_carrier
+		new(5, "aircraft_carrier")
 	end
 
 	def hit!
