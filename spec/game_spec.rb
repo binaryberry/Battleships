@@ -51,7 +51,6 @@ describe Game do
 	it "should switch to player2's turn after player1 takes a shot" do
 	 allow(player2.board).to receive(:hit).with("B2")
 		game.shoot("B2")
-		game.switch_turn
 		expect(game.turn).to eq player2
 	end
 

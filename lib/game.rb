@@ -12,7 +12,7 @@ class Game
 	end
 
 	def opponent
-		@player2
+		self.turn == player1 ?  player2 : player1 
 	end
 
 
@@ -26,8 +26,8 @@ class Game
 	end
 
 	def shoot(coordinates)
-		player2.board.hit(coordinates)
-		winner?(player1)
+		opponent.board.hit(coordinates)
+		winner?(turn)
 		switch_turn
 	end
 
@@ -36,8 +36,6 @@ class Game
 	end
 
 	def switch_turn
-		self.turn == player1 ? @turn = player2 : @turn = player1 
-		self.opponent == player2 ? @opponent = player1 : @opponent = player2 
-		
+		self.turn == player1 ? @turn = player2 : @turn = player1 	
 	end
 end 
