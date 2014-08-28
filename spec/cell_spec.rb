@@ -25,27 +25,10 @@ describe Cell do
 	context 'Interacting with the ship' do
 		
 		it "should change its content to ship when receives a ship" do
-			#expect(ship).to receive(:length)
+			allow(ship).to receive(:place!).and_return(true)
 			cell.accept(ship)
 			expect(cell.content).to eq ship
 		end
-
-		# it "should know the length of a ship" do
-		# 	expect(ship).to receive(:length)
-		# 	cell.accept(ship)
-		# end
-
-		# it "changes @placed attribute after reach length" do
-		# 	allow(ship).to receive(:length)
-		# 	expect(ship).to receive(:place!)
-		# 	cell.accept ship
-		# 	ship.place!
-		# end
-
-		# it "should raise an error if cell reach ship length" do
-		# 	expect(ship).to receive(:length).and_return(3)
-		# 	expect{ cell.accept(ship) }.to raise_error(RuntimeError)
-		# end
 
 	end
 
