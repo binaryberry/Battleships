@@ -39,6 +39,7 @@ class Grid
 	end
 
 	def hit(coordinates)
+		true
 	end
 
 end
