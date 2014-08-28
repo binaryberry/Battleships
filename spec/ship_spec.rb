@@ -4,12 +4,17 @@ require './lib/ship.rb'
 describe Ship do
 
 	let(:length)	{ 5 }
-	let(:ship) 		{ Ship.new(length) }
+	let(:name)		{ 'submarine' }
+	let(:ship) 		{ Ship.new(length,name) }
 
 	context "Initialization" do
 
 		it "should have a length when created" do
 			expect(ship.length). to be 5
+		end
+
+		it "should know its name" do
+			expect(ship.name).to eq 'submarine'
 		end
 
 		it "should have a hit count of zero when it is created" do

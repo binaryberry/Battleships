@@ -5,9 +5,13 @@ class Grid
 
 	attr_accessor :cells
 
-	def initialize
+	attr_reader :name
+
+	def initialize(playername)
 	@cells = {}
 	create_cells
+	@name = "#{playername}"
+
 	end
 
 	def create_cells
@@ -30,10 +34,16 @@ class Grid
 	end
 
 	def test_cell_then_place(ship,coordinates,orientation, attempt)
-		raise "Cannot place ship there"  if cells[ coordinates ].content.class == ship.class and attempt == 1 #test
-		cells[ coordinates ].content = ship if attempt == 2 #placement
+
+		raise "You cannot place a ship there" if cells.has_key?(coordinates) == false
+		raise "Cannot place ship on another ship"  if cells[ coordinates ].content.class == ship.class and attempt == 1 #test
+		cells[ coordinates ].accept ship if attempt == 2 #placement
 		return coordinates.next if orientation == "vertically"
 		return coordinates.reverse.next.reverse if orientation == "horizontally"
 	end
 
+	def hit(coordinates)
+		raise 'this cell has already been hit' unless cells[coordinates].status == nil
+		cells[coordinates].hit_it!
+	end
 end
