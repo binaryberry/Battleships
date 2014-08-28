@@ -12,11 +12,6 @@ it 'is created with 100 cells' do
 end
 
 
-it 'is created with five new ships' do
-	expect(board.create_ships.count).to eq 5
-end
-
-
 xit 'asks the player for the hit location' do
 	expect(board.ask_hit).to match(/[A-J]\d/)
 

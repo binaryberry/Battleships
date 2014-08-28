@@ -47,12 +47,5 @@ class Game
 	patrol_boat=Ship.patrol_boat	
 	player.board.ships = [aircraft_carrier, battleship, submarine, destroyer, patrol_boat]
 	end
-	# 	def create_ships
-	# aircraft_carrier=Ship.aircraft_carrier
-	# battleship=Ship.new(4, 'battleship')
-	# submarine=Ship.new(3, 'submarine')
-	# destroyer=Ship.new(3, 'destroyer')
-	# patrol_boat=Ship.new(2, 'patrol boat')
-	# @ships = [aircraft_carrier, battleship, submarine, destroyer, patrol_boat]
-	# end
+
 end 

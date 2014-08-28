@@ -10,7 +10,6 @@ class Board
 
 	def initialize(playername)
 	create_cells
-	create_ships
 	@name = "#{playername}"
 	@placement = []
 	end
