@@ -9,4 +9,6 @@ class Player
 	@board = board
 	end
 
+	
+
 end

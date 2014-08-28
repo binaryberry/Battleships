@@ -1,4 +1,22 @@
-[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
+[32m.[0m[32m.[0m[33m*[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m
 
-Finished in 10.66 seconds (files took 0.09244 seconds to load)
-[32m18 examples, 0 failures[0m
+Pending:
+  [33mBoard asks the player for the hit location[0m
+    # [36mTemporarily skipped with xit[0m
+    # [36m./spec/board_spec.rb:20[0m
+
+Failures:
+
+  1) Game creates 5 ships per player when initialized
+     [31mFailure/Error: expect(game.create_ships(player1.board).count).to eq 5[0m
+     [31mNoMethodError:[0m
+     [31m  undefined method `board' for nil:NilClass[0m
+     [36m# ./lib/game.rb:50:in `create_ships'[0m
+     [36m# ./spec/game_spec.rb:64:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 0.01443 seconds (files took 0.08781 seconds to load)
+[31m30 examples, 1 failure, 1 pending[0m
+
+Failed examples:
+
+[31mrspec ./spec/game_spec.rb:62[0m [36m# Game creates 5 ships per player when initialized[0m

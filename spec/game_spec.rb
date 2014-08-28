@@ -58,4 +58,9 @@ describe Game do
 		game.switch_turn
 		expect(game.opponent).to eq player1
 	end
+
+	it "creates 5 ships per player when initialized" do
+		# allow(player1.board).to receive(:ships)
+		expect(game.create_ships(player1.board).count).to eq 5
+	end
 end

@@ -38,4 +38,21 @@ class Game
 	def switch_turn
 		self.turn == player1 ? @turn = player2 : @turn = player1 	
 	end
+
+	def create_ships(player)
+	aircraft_carrier=Ship.aircraft_carrier
+	battleship=Ship.battleship
+	submarine=Ship.submarine
+	destroyer=Ship.destroyer
+	patrol_boat=Ship.patrol_boat	
+	player.board.ships = [aircraft_carrier, battleship, submarine, destroyer, patrol_boat]
+	end
+	# 	def create_ships
+	# aircraft_carrier=Ship.aircraft_carrier
+	# battleship=Ship.new(4, 'battleship')
+	# submarine=Ship.new(3, 'submarine')
+	# destroyer=Ship.new(3, 'destroyer')
+	# patrol_boat=Ship.new(2, 'patrol boat')
+	# @ships = [aircraft_carrier, battleship, submarine, destroyer, patrol_boat]
+	# end
 end 

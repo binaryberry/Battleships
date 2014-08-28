@@ -11,7 +11,23 @@ class Ship
 	end
 
 	def self.aircraft_carrier
-		new(5, "aircraft_carrier")
+		new(5, "aircraft carrier")
+	end
+
+	def self.battleship
+		new(4, "battleship")
+	end
+
+	def self.submarine
+		new(3, "submarine")
+	end
+
+	def self.destroyer
+		new(3, "destroyer")
+	end
+
+	def self.patrol_boat
+		new(2, "patrol boat")
 	end
 
 	def hit!
