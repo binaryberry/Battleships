@@ -28,29 +28,14 @@ describe Grid do
 	grid.cells.reject {|key,cell| key == "A1" or key == "B1"}.each {|key,cell| expect(cell.content). to eq 'water'}
 	end
 
-	it 'returns an error if there is already a ship where the user wants to place another ship' do
+	it 'returns an error if there is already a ship where the user wants to place another ship (horizontally)' do
 		grid.place(cruiser,"B1","vertically")
 		expect(lambda{grid.place(destroyer,"A1","horizontally")}).to raise_error("Cannot place ship there")
 	end
 
-
-
-
-	# it 'is created with five new ships' do
-	# 	expect(grid.create_ships.count).to eq 5
-	# end
-
-	# it "print a line of the grid" do
-	# 	expect{grid.print_line(1)}. to output("~~~~~~~~~~").to_stdout
-	# end
-
-	# it "prints a line of the grid with hits" do
-	# 	grid.cells["A1"].hit_it
-	# 	expect{grid.print_line(1)}. to output("*~~~~~~~~~").to_stdout
-	# end
-
-	# it "prints all the lines of the grid" do
-	# 	expect{grid.print_grid}. to output("~~~~~~~~~~\n~~~~~~~~~~\n~~~~~~~~~~\n~~~~~~~~~~\n~~~~~~~~~~\n~~~~~~~~~~\n~~~~~~~~~~\n~~~~~~~~~~\n~~~~~~~~~~\n~~~~~~~~~~\n").to_stdout
-	# end
+	it 'returns an error if there is already a ship where the user wants to place another ship (vertically)' do
+		grid.place(cruiser,"A1","horizontally")
+		expect(lambda{grid.place(destroyer,"B1","vertically")}).to raise_error("Cannot place ship there")
+	end
 end
 
