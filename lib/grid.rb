@@ -4,10 +4,12 @@ require './lib/cell.rb'
 class Grid
 
 	attr_accessor :cells
+	attr_reader :name
 
-	def initialize
+	def initialize(playername)
 	@cells = {}
 	create_cells
+	@name = "#{playername}"
 	end
 
 	def create_cells
@@ -34,6 +36,9 @@ class Grid
 		cells[ coordinates ].content = ship if attempt == 2 #placement
 		return coordinates.next if orientation == "vertically"
 		return coordinates.reverse.next.reverse if orientation == "horizontally"
+	end
+
+	def hit(coordinates)
 	end
 
 end

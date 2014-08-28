@@ -5,7 +5,7 @@ require 'ship'
 
 describe Grid do
 
-	let(:grid) 		{ Grid.new					}
+	let(:grid) 		{ Grid.new("john")					}
 	let(:destroyer) { Ship.patrol_boat		}
 	let(:cell)		{ Cell.new("A1")			}
 	let(:cruiser)	{ Ship.destroyer				}
