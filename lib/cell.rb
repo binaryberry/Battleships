@@ -13,6 +13,7 @@ class Cell
 		#count    = ship.length
 		#raise 'No more cells for this ship' if count
 		@content = ship
+		ship.place!
 		#ship.place! if count
 		
 	end
