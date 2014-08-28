@@ -7,9 +7,9 @@ Creating battleships game - Makers Academy week 4 project
 
 # The Game
 
-The player and his opponent place a defined number of ships of various lengths on a board made from 10 x 10 cells. Two ships cannot be placed in neighboring cells. The aim is to sink all of the opponent's ships before yours are sunk.
+The player and his opponent place a defined number of ships of various lengths on a grid made from 10 x 10 cells. Two ships cannot be placed in neighboring cells. The aim is to sink all of the opponent's ships before yours are sunk.
 
-Once the ships have been placed, the players take turns in selecting cells on their opponent's board to attack. If the attacked cell was empty, the cell is marked as failed hit. If the attacked cell had a ship placed on it, the hit is successful. If all the cells of a ship are hit, the ship is sunk. Once all the ships of a player are sunk, the game is over and his opponent is the winner!
+Once the ships have been placed, the players take turns in selecting cells on their opponent's grid to attack. If the attacked cell was empty, the cell is marked as failed hit. If the attacked cell had a ship placed on it, the hit is successful. If all the cells of a ship are hit, the ship is sunk. Once all the ships of a player are sunk, the game is over and his opponent is the winner!
 
 # The Domain Model
 
@@ -17,13 +17,13 @@ Once the ships have been placed, the players take turns in selecting cells on th
 
 ##### Responsibilities
 
-- it orders the board to create itself
+- it orders the grid to create itself
 - it prompts the players to place the ships
 - it begins the game
 - it determines who's turn it is
 - it keeps score
 
-## The Board
+## The Grid
 
 ##### Responsibilities
 - it creates itself, 100 cells with their location, and 5 ships as follows: the aircraft carrier (size: 5 cells), the battleship (4 cells), the Submarine (3 cells), the Destroyer (3 cells) and the patrol boat (2 cells)
@@ -45,7 +45,7 @@ Once the ships have been placed, the players take turns in selecting cells on th
 - it knows when it has been sunk
 
 ##### Interactions
-- The Board
+- The Grid
 - The Cell
 
 ## The Cell
@@ -58,7 +58,7 @@ Once the ships have been placed, the players take turns in selecting cells on th
 
 ##### Interactions
 - The Ship
-- The Board
+- The Grid
 
 # Game dynamcs
 

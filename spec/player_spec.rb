@@ -1,18 +1,17 @@
 require "player"
+require "grid"
 
 describe Player do
   
-let(:player) {Player.new("Rihanna")}
-let(:board) {double :board}
+let(:player) 	{Player.new("Rihanna")}
+let(:grid) 		{Grid.new("Rihanna")}
 
 it "is created with a name" do
-
 expect(player.name).to eq "Rihanna"
 end
 
-it "should be given a board" do
-player.add_board(board)
-expect(player.board).to eq board
+it "it is created with a grid" do
+expect(player.grid).to be_a(Grid)
 end
 
 

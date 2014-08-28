@@ -4,7 +4,7 @@ describe Cell do
 
 	let(:cell)  { Cell.new('A1') }
 	let(:ship)  { double :ship   }
-	let(:board) { double :board  }
+	let(:grid) { double :grid  }
 
 
 	context 'Is initialized' do
