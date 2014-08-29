@@ -1,33 +1,36 @@
+require './lib/score'
+
 class Ship
 
-	attr_accessor :hit_count
+	attr_accessor :hit_count, :player
 	attr_reader :length, :name
 
-	def initialize(length,name)
+	def initialize(length,name, player)
 	@length		= length
-	@name     = name
+	@name     	= name
+	@player 	= player
 	@hit_count	= 0
 	@placed		= false
 	end
 
-	def self.aircraft_carrier
-		new(5, "aircraft carrier")
+	def self.aircraft_carrier(player)
+		new(5, "aircraft carrier", player)
 	end
 
-	def self.battleship
-		new(4, "battleship")
+	def self.battleship(player)
+		new(4, "battleship", player)
 	end
 
-	def self.submarine
-		new(3, "submarine")
+	def self.submarine(player)
+		new(3, "submarine", player)
 	end
 
-	def self.destroyer
-		new(3, "destroyer")
+	def self.destroyer(player)
+		new(3, "destroyer", player)
 	end
 
-	def self.patrol_boat
-		new(2, "patrol boat")
+	def self.patrol_boat(player)
+		new(2, "patrol boat", player)
 	end
 
 	def hit!
@@ -42,7 +45,8 @@ class Ship
 		@placed = true
 	end
 
-	def sunk?
+	def sunk?(score)
+		score.red_alert(self) if hit_count == length
 		return true if hit_count == length
 		return false
 	end

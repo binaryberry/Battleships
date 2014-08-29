@@ -66,6 +66,6 @@ describe Game do
 
 	it "creates 5 ships per player when initialized" do
 		# allow(player_1.grid).to receive(:ships)
-		expect(game.create_ships.count).to eq 5
+		expect(game.create_ships(player_1).count).to eq 5
 	end
 end

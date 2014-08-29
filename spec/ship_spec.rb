@@ -5,7 +5,9 @@ describe Ship do
 
 	let(:length)	{ 5 }
 	let(:name)		{ 'submarine' }
-	let(:ship) 		{ Ship.new(length,name) }
+	let(:player)	{ double :player	}
+	let(:ship) 		{ Ship.new(length,name,player) }
+	let(:score)		{double :score}
 
 	context "Initialization" do
 
@@ -40,12 +42,19 @@ describe Ship do
 		end
 
 		it "has not been sunk when it is created" do
-			expect(ship.sunk?). to be false
+			expect(ship.sunk?(score)). to be false
 		end
 
 		it "is sunk once it has been hit on its entire length" do
 			5.times {ship.hit!}
-			expect(ship.sunk?). to be true
+			allow(score).to receive(:red_alert).with(ship)
+			expect(ship.sunk?(score)). to be true
+		end
+
+		it "tells score that a ship has sunk" do
+			expect(score).to receive(:red_alert).with(ship)
+			5.times {ship.hit!}
+			ship.sunk?(score)
 		end
 	end
 end
