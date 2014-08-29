@@ -6,7 +6,7 @@ describe Ship do
 	let(:length)	{ 5 }
 	let(:name)		{ 'submarine' }
 	let(:player)	{ double :player	}
-	let(:ship) 		{ Ship.new(length,name,player) }
+	let(:ship) 		{ Ship.new(length,name) }
 	let(:score)		{double :score}
 
 	context "Initialization" do

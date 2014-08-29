@@ -4,15 +4,11 @@ require './lib/player'
 
 class Game
 
-	attr_reader :player_1, :player_2, :grid1, :grid2, :player1_with_grid, :player2_with_grid
+	attr_reader :player_1, :player_2, :grid1, :grid2
 
 	def initialize(player1, player2)
 	@player_1 = Player.new(player1)
 	@player_2 = Player.new(player2)
-	@player1_with_grid = create_ships(player_1)
-	@player2_with_grid = create_ships(player_2)
-	@grid1 = Grid.new(player_1.name)
-	@grid2 = Grid.new(player_2.name)
 	@turn = player_1
 	end
 
@@ -42,16 +38,6 @@ class Game
 
 	def switch_turn
 		self.turn == player_1 ? @turn = player_2 : @turn = player_1 	
-	end
-
-	def create_ships(player)
-		{
-			aircraft_carrier: Ship.aircraft_carrier(player),
-		  battleship:       Ship.battleship(player),
-		  submarine:        Ship.submarine(player),
-		  destroyer:        Ship.destroyer(player),
-		  patrol_boat:      Ship.patrol_boat(player)
-		}
 	end
 
 end 

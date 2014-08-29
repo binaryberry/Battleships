@@ -1,11 +1,11 @@
-require "ship"
+# require "ship"
 
 
-class Score
+# class Score
 
-	def red_alert(ship)
-		ship.sunk?(self)
-	end
+# 	def red_alert(ship)
+# 		ship.sunk?(self)
+# 	end
 
 
-end
+# end
