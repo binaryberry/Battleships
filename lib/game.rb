@@ -4,7 +4,8 @@ require './lib/player'
 
 class Game
 
-	attr_reader :player_1, :player_2, :grid1, :grid2
+	attr_reader 	:player_1, :player_2
+	attr_accessor	:turn
 
 	def initialize(player1, player2)
 	@player_1 = Player.new(player1)
@@ -17,14 +18,9 @@ class Game
 	end
 
 
-	def place ship, on_behalf_of: "player", on_cell: cell, facing: "vertically"
+	def place(ship, on_behalf_of, on_cell, facing)
 		on_behalf_of.grid.place(ship, on_cell, facing)
 	end 
-
-
-	def turn
-		@turn
-	end
 
 	def shoot(coordinates)
 		opponent.grid.hit(coordinates)

@@ -5,8 +5,8 @@ require "player"
 
 describe Game do
 
-	let(:player_1)     { double :player, grid: nil, all_ships_sunk?: nil , name: "Rihanna" 	}
-	let(:player_2)     { double :player, grid: nil, name: "Albert" 	    }
+	let(:player_1)     { double :player, ships: destroyer, grid: nil, all_ships_sunk?: nil , name: "Rihanna" 	}
+	let(:player_2)     { double :player, ships: destroyer, grid: nil, name: "Albert" 	    }
 
 
 
@@ -31,8 +31,8 @@ describe Game do
 	end
 
 	it "should be able to place a ship for a player" do
-		expect(player_1.grid).to receive(:place).with destroyer, "A1", "vertically"
-		game.place(destroyer, on_behalf_of: player_1, on_cell: "A1", facing: "vertically")
+		expect(player_1.grid).to receive(:place).with game.player_1.ships[:destroyer], "A1", "vertically"
+		game.place(game.player_1.ships[:destroyer], player_1,"A1", "vertically")
 	end
 
 
