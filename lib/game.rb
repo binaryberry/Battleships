@@ -9,8 +9,8 @@ class Game
 	def initialize(player1, player2)
 	@player_1 = Player.new(player1)
 	@player_2 = Player.new(player2)
-	@player1_with_grid = create_ships
-	@player2_with_grid = create_ships
+	@player1_with_grid = create_ships(player_1)
+	@player2_with_grid = create_ships(player_2)
 	@grid1 = Grid.new(player_1.name)
 	@grid2 = Grid.new(player_2.name)
 	@turn = player_1
@@ -44,13 +44,13 @@ class Game
 		self.turn == player_1 ? @turn = player_2 : @turn = player_1 	
 	end
 
-	def create_ships
+	def create_ships(player)
 		{
-			aircraft_carrier: Ship.aircraft_carrier,
-		  battleship:       Ship.battleship,
-		  submarine:        Ship.submarine,
-		  destroyer:        Ship.destroyer,
-		  patrol_boat:      Ship.patrol_boat
+			aircraft_carrier: Ship.aircraft_carrier(player),
+		  battleship:       Ship.battleship(player),
+		  submarine:        Ship.submarine(player),
+		  destroyer:        Ship.destroyer(player),
+		  patrol_boat:      Ship.patrol_boat(player)
 		}
 	end
 
