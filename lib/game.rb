@@ -4,7 +4,7 @@ require './lib/player'
 
 class Game
 
-	attr_reader :player_1, :player_2, :grid1, :grid2
+	attr_reader :player_1, :player_2, :grid1, :grid2, :player1_with_grid, :player2_with_grid
 
 	def initialize(player1, player2)
 	@player_1 = Player.new(player1)
