@@ -1,3 +1,5 @@
+require './lib/score'
+
 class Ship
 
 	attr_accessor :hit_count
@@ -5,7 +7,7 @@ class Ship
 
 	def initialize(length,name)
 	@length		= length
-	@name     = name
+	@name     	= name
 	@hit_count	= 0
 	@placed		= false
 	end
@@ -42,7 +44,8 @@ class Ship
 		@placed = true
 	end
 
-	def sunk?
+	def sunk?(score)
+		score.red_alert(self) if hit_count == length
 		return true if hit_count == length
 		return false
 	end
