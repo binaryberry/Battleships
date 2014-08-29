@@ -45,12 +45,13 @@ class Game
 	end
 
 	def create_ships
-	aircraft_carrier=Ship.aircraft_carrier
-	battleship=Ship.battleship
-	submarine=Ship.submarine
-	destroyer=Ship.destroyer
-	patrol_boat=Ship.patrol_boat	
-	[aircraft_carrier, battleship, submarine, destroyer, patrol_boat]
+		{
+			aircraft_carrier: Ship.aircraft_carrier,
+		  battleship:       Ship.battleship,
+		  submarine:        Ship.submarine,
+		  destroyer:        Ship.destroyer,
+		  patrol_boat:      Ship.patrol_boat
+		}
 	end
 
 end 
