@@ -6,9 +6,9 @@ require 'ship'
 describe Grid do
 
 	let(:grid) 		{ Grid.new("john")					}
-	let(:destroyer) { Ship.patrol_boat("john")		}
+	let(:destroyer) { Ship.patrol_boat		}
 	let(:cell)		{ Cell.new("A1")			}
-	let(:cruiser)	{ Ship.destroyer("john")				}	
+	let(:cruiser)	{ Ship.destroyer				}	
 
 	it 'is created with 100 cells' do
 		expect(grid.create_cells.count).to eq 100

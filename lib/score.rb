@@ -1,5 +1,6 @@
+
 require "./lib/ship"
-require "./lib/git brplayer"
+require "./lib/player"
 
 
 class Score
