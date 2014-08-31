@@ -15,9 +15,14 @@ let(:grid) 		{Grid.new("Rihanna")}
 	end
 
 	it "creates 5 ships per player when initialized" do
-		# allow(player_1.grid).to receive(:ships)
 		expect(player.ships.count).to eq 5
 	end
+
+	it "can be given an id" do
+	player.id = "player_1"
+	expect(player.id).to eq "player_1"
+	end
+
 
 
 end

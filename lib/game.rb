@@ -4,13 +4,16 @@ require './lib/player'
 
 class Game
 
-	attr_reader 	:player_1, :player_2
+	attr_reader 	:player_1, :player_2, :score
 	attr_accessor	:turn
 
 	def initialize(player1, player2)
 	@player_1 = Player.new(player1)
+	@player_1.id = "player_1"
 	@player_2 = Player.new(player2)
+	@player_2.id = "player_2"
 	@turn = player_1
+	@score = Score.new
 	end
 
 	def opponent
@@ -23,13 +26,9 @@ class Game
 	end 
 
 	def shoot(coordinates)
-		opponent.grid.hit(coordinates)
-		winner?(turn)
+		score.check(opponent) if opponent.grid.hit(coordinates)
+		return "#{turn.name} has won the game!"	if score.winner?(turn)
 		switch_turn
-	end
-
-	def winner?(player)
-	player.all_ships_sunk?
 	end
 
 	def switch_turn
