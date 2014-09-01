@@ -23,7 +23,7 @@ class Game
 
 
 	def place(ship, on_behalf_of, on_cell, facing)
-		on_behalf_of.grid.place(ship, on_cell, facing)
+		on_behalf_of.grid.place(on_behalf_of.ships[ship],on_cell.to_s.upcase, facing.to_s.downcase)
 	end 
 
 	def shoot(coordinates)
@@ -35,5 +35,11 @@ class Game
 	def switch_turn
 		self.turn == player_1 ? @turn = player_2 : @turn = player_1 	
 	end
+
+	def opponent_board
+		duplicate = opponent.grid.dup
+		duplicate.cells.values.each {|cell| cell.content = nil}
+	end
+
 
 end 

@@ -2,6 +2,7 @@ require 'game'
 require "grid"
 require 'cell'
 require "player"
+require "ship"
 
 describe Game do
 
@@ -35,8 +36,8 @@ describe Game do
 	end
 
 	it "should be able to place a ship for a player" do
-		expect(player_1.grid).to receive(:place).with game.player_1.ships[:destroyer], "A1", "vertically"
-		game.place(game.player_1.ships[:destroyer], player_1,"A1", "vertically")
+		expect(game.player_1.grid).to receive(:place).with game.player_1.ships[destroyer], "A1", "vertically"
+		game.place(destroyer, game.player_1,"A1", "vertically")
 	end
 
 
@@ -60,6 +61,11 @@ describe Game do
 	it "should change the opponent after a turn is finished" do
 		game.switch_turn
 		expect(game.opponent).to be game.player_1
-	end	
+	end
+
+	it "should allow the player to see the opponent's board but not the ships" do
+		game.opponent_board.each {|cell| expect(cell.content == nil)}
+	end
+
 
 end
