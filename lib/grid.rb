@@ -23,6 +23,7 @@ class Grid
 	end
 
 	def place(ship,coordinates,orientation)
+		raise "That ship has already been placed" if ship.placed?
 		for attempt in 1..2
 			copy = coordinates
 			ship.length.times do

@@ -88,4 +88,10 @@ describe Grid do
 		expect(lambda{grid.place(destroyer, "J10", "horizontally")}).to raise_error('You cannot place a ship there')
 	end
 
+	it "returns an error if the ship has already been placed" do
+		grid.place(destroyer, "A1", "vertically")
+		puts grid.cells["A1"].content.placed?
+		expect(lambda{grid.place(destroyer,"B1", "vertically")}).to raise_error("That ship has already been placed")
+	end
+
 end

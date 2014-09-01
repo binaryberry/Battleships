@@ -1,6 +1,7 @@
 require './lib/grid'
 require './lib/cell'
-require './lib/player'
+require './lib/player.rb'
+require './lib/score.rb'
 
 class Game
 
