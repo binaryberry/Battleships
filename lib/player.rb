@@ -1,17 +1,13 @@
 class Player
 	attr_reader  :grid
 
-	attr_accessor :name,:ships
+	attr_accessor :name,:ships, :id
 	
 	def initialize(name)
 	@name = name
 	@grid = Grid.new(self.name)
 	@ships = create_ships
 	end
-
-	# def add_grid(grid)
-	# @grid = grid
-	# end
 
 	def all_ships_sunk?
 
@@ -26,6 +22,16 @@ class Player
 		  patrol_boat:      Ship.patrol_boat
 		}
 	end
+
+	# def ship_status_list(player)
+	# 	{
+	# 	aircraft_carrier: player.ships[aircraft_carrier:].sunk?
+	# 	battleship:       player.ships[battleship:].sunk?
+	# 	submarine:        player.ships[submarine:].sunk?
+	# 	destroyer:        player.ships[destroyer:].sunk? 
+	# 	patrol_boat:      player.ships[patrol_boat:].sunk?
+	# 	}
+	# end
 	
 
 end

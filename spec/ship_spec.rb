@@ -42,19 +42,13 @@ describe Ship do
 		end
 
 		it "has not been sunk when it is created" do
-			expect(ship.sunk?(score)). to be false
+			expect(ship.sunk?). to be false
 		end
 
 		it "is sunk once it has been hit on its entire length" do
 			5.times {ship.hit!}
 			allow(score).to receive(:red_alert).with(ship)
-			expect(ship.sunk?(score)). to be true
-		end
-
-		it "tells score that a ship has sunk" do
-			expect(score).to receive(:red_alert).with(ship)
-			5.times {ship.hit!}
-			ship.sunk?(score)
+			expect(ship.sunk?). to be true
 		end
 	end
 end

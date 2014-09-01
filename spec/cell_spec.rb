@@ -45,6 +45,7 @@ describe Cell do
 
 		it "should return 'hit' if the content is a ship" do
 			expect(ship).to receive(:hit!)
+			expect(ship).to receive(:sunk?)
 			cell.content = ship
 			cell.hit_it!
 			expect(cell.status).to eq 'hit'

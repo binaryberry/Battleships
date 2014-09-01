@@ -25,7 +25,9 @@ class Cell
 		else
 			@status = 'hit'
 			content.hit!
+			return content.sunk?
 		end
+		return false
 	end
 
 

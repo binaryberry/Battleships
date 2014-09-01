@@ -44,8 +44,7 @@ class Ship
 		@placed = true
 	end
 
-	def sunk?(score)
-		score.red_alert(self) if hit_count == length
+	def sunk?
 		return true if hit_count == length
 		return false
 	end
