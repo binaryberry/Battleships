@@ -9,18 +9,25 @@ class Cell
 		@coordinates = coordinates
 	end
 
-	def receive ship
+	def accept ship
+		#count    = ship.length
+		#raise 'No more cells for this ship' if count
 		@content = ship
+		ship.place!
+		#ship.place! if count
+		
 	end
 
 
-	def hit_it
+	def hit_it!
 		if @content == 'water'
 			@status = 'miss' 
 		else
 			@status = 'hit'
 			content.hit!
+			return content.sunk?
 		end
+		return false
 	end
 
 
