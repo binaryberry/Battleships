@@ -60,7 +60,7 @@ Once the ships have been placed, the players take turns in selecting cells on th
 - The Ship
 - The Grid
 
-# Game dynamcs
+# Game dynamics
 
 ## Game creation
 
