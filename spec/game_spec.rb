@@ -42,17 +42,14 @@ describe Game do
 
 
 	it "should allow a player to take a shot" do
+		allow_message_expectations_on_nil
 		allow(player_2.grid).to receive(:hit).with("B2")
 		game.shoot("B2")
 	end
 
-	# it "should ask if player_1 has won" do
-	# 	allow(score).to receive(:winner?).with(game.turn).and_throw(true)
-	# 	expect(game.shoot("A1")).to eq ("#{game.turn.name} has won the game!")
-	# end
-
 
 	it "should switch to player_2's turn after player_1 takes a shot" do
+	 	allow_message_expectations_on_nil
 	 	allow(player_2.grid).to receive(:hit).with("B2")
 		game.shoot("B2")
 		expect(game.turn.name).to eq player_2.name

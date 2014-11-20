@@ -22,16 +22,6 @@ class Player
 		  patrol_boat:      Ship.patrol_boat
 		}
 	end
-
-	# def ship_status_list(player)
-	# 	{
-	# 	aircraft_carrier: player.ships[aircraft_carrier:].sunk?
-	# 	battleship:       player.ships[battleship:].sunk?
-	# 	submarine:        player.ships[submarine:].sunk?
-	# 	destroyer:        player.ships[destroyer:].sunk? 
-	# 	patrol_boat:      player.ships[patrol_boat:].sunk?
-	# 	}
-	# end
 	
 
 end

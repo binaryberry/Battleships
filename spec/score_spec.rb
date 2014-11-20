@@ -31,20 +31,4 @@ describe Score do
 
 
 
-
-	# it 'knows whose ship has been sunk' do
-	# 	expect(ship).to receive(:sunk?).and_return(true)	
-	# 	score.red_alert(ship)
-	# 	expect(ship.player).to eq "bob"	
-	# end
-
-	# it 'should know how many ships have been sunk for each player' do
-	# 	expect(ship).to receive(:sunk?).and_return(true)	
-	# 	score.red_alert(ship)
-	# 	expect(score.number_of_ships_left?(bob)).to eq ships.count
-	# end
-
-
-
-
 end
